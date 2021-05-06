@@ -1,1 +1,1 @@
-module "test"
+module "rime-cli"
