@@ -15,7 +15,7 @@ var customWord = flag.String("w", "", "input customWord word")
 var wordCode = flag.String("c", "", "input wordCode code")
 var priority = flag.Int("p", 0, "input priority priority")
 
-const winDefaultDirPath = "\\AppData\\Roaming\\Rime"
+const winDefaultDirPath = "\\AppData\\Roaming\\Rime\\"
 const macDefaultDirPath = "/Library/Rime/"
 const customPhraseFileName = "custom_phrase.txt"
 
