@@ -32,8 +32,18 @@ func main() {
 	if *priority == 0 {
 		*priority = 1
 	}
-	priorityStr := strconv.Itoa(*priority)
-	appendCode := *customWord + "	" + *wordCode + "	" + priorityStr + "\n"
+	appendCode := appendCodeSplicing(*customWord, *wordCode, *priority)
+	fileAppend(appendCode)
+}
+
+// 代追加字符串拼接
+func appendCodeSplicing(customWord string, wordCode string, priority int) string {
+	priorityStr := strconv.Itoa(priority)
+	return customWord + "	" + wordCode + "	" + priorityStr + "\n"
+}
+
+// 文件追加
+func fileAppend(appendCode string) {
 	file, err := os.OpenFile(*filePath, os.O_APPEND|os.O_WRONLY, 0644)
 	defer file.Close()
 	if err == nil {
