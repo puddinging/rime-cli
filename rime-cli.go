@@ -1,10 +1,12 @@
 package main
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"os"
 	"os/user"
+	"runtime"
 	"strconv"
 )
 
@@ -13,12 +15,19 @@ var customWord = flag.String("w", "", "input customWord word")
 var wordCode = flag.String("c", "", "input wordCode code")
 var priority = flag.Int("p", 0, "input priority priority")
 
+const winDefaultDirPath = "\\AppData\\Roaming\\Rime\\"
+const macDefaultDirPath = "/Library/Rime/"
+const customPhraseFileName = "custom_phrase.txt"
+
 func main() {
 	flag.Parse()
 	if *filePath == "" {
-		current, _ := user.Current()
-		homeDir := current.HomeDir
-		*filePath = homeDir + "/Library/Rime/custom_phrase.txt"
+		defaultFilePath, err := generateDefaultDirPath()
+		if err == nil {
+			*filePath = defaultFilePath
+		} else {
+			fmt.Printf(err.Error())
+		}
 	}
 
 	if *customWord == "" {
@@ -34,6 +43,19 @@ func main() {
 	}
 	appendCode := appendCodeSplicing(*customWord, *wordCode, *priority)
 	fileAppend(appendCode)
+}
+
+func generateDefaultDirPath() (string, error) {
+	current, _ := user.Current()
+	homeDir := current.HomeDir
+	goos := runtime.GOOS
+	if "windows" == goos {
+		return homeDir + winDefaultDirPath + customPhraseFileName, nil
+	} else if "darwin" == goos {
+		return homeDir + macDefaultDirPath + customPhraseFileName, nil
+	} else {
+		return "", errors.New("This system is not currently supported, please specify the file path")
+	}
 }
 
 // 代追加字符串拼接
