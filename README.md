@@ -1,3 +1,4 @@
+![GitHub](https://img.shields.io/github/license/puddinging/rime-cli)
 # rime-cli
 
 关于小狼毫输入法的一个小工具
