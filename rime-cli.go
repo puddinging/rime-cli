@@ -13,7 +13,8 @@ import (
 var filePath = flag.String("f", "", "input filePath")
 var customWord = flag.String("w", "", "input customWord word")
 var wordCode = flag.String("c", "", "input wordCode code")
-var priority = flag.Int("p", 0, "input priority priority")
+var priority = flag.Int("p", 0, "input priority")
+var delCode = flag.String("d", "", "input del code")
 
 const winDefaultDirPath = "\\AppData\\Roaming\\Rime\\"
 const macDefaultDirPath = "/Library/Rime/"
@@ -74,4 +75,9 @@ func fileAppend(appendCode string) {
 			fmt.Printf("写入错误")
 		}
 	}
+}
+
+// 通过code编码删除自定义词库
+func delByCode(customCode string) {
+
 }
