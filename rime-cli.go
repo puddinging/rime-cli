@@ -20,6 +20,9 @@ const winDefaultDirPath = "\\AppData\\Roaming\\Rime\\"
 const macDefaultDirPath = "/Library/Rime/"
 const customPhraseFileName = "custom_phrase.txt"
 
+const customWordHelpWord = "\n customWord is null use --help to get help \n"
+const wordCodeHelpWord = "\n wordCode is null use --help to get help \n"
+
 func main() {
 	flag.Parse()
 	if *filePath == "" {
@@ -27,16 +30,16 @@ func main() {
 		if err == nil {
 			*filePath = defaultFilePath
 		} else {
-			fmt.Printf(err.Error())
+			fmt.Print(err.Error())
 		}
 	}
 
 	if *customWord == "" {
-		fmt.Printf("\n customWord is null use --help to get help \n")
+		fmt.Print(customWordHelpWord)
 	}
 
 	if *wordCode == "" {
-		fmt.Printf("\n wordCode is null use --help to get help \n")
+		fmt.Print(wordCodeHelpWord)
 	}
 
 	if *priority == 0 {
