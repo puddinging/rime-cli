@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/puddinging/rime-cli)
 # rime-cli
 
-关于小狼毫输入法的一个小工具
+关于小狼毫输入法的一个小工具，可以使用其进行自定义词的添加
 
 # 参数
 
