@@ -23,7 +23,7 @@ const customPhraseFileName = "custom_phrase.txt"
 const customWordHelpWord = "\n customWord is null use --help to get help \n"
 const wordCodeHelpWord = "\n wordCode is null use --help to get help \n"
 
-const errorInfo = "写入错误"
+const errorInfo = "write error"
 
 func main() {
 	flag.Parse()
