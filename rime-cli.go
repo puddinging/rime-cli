@@ -45,7 +45,7 @@ func main() {
 	}
 
 	if *priority == 0 {
-		*priority = 1
+		*priority = 2
 	}
 	appendCode := appendCodeSplicing(*customWord, *wordCode, *priority)
 	fileAppend(appendCode)
