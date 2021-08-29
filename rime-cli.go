@@ -45,7 +45,7 @@ func main() {
 	}
 
 	if *priority == 0 {
-		*priority = 1
+		*priority = 2
 	}
 	appendCode := appendCodeSplicing(*customWord, *wordCode, *priority)
 	fileAppend(appendCode)
@@ -84,5 +84,5 @@ func fileAppend(appendCode string) {
 
 // 通过code编码删除自定义词库
 func delByCode(customCode string) {
-
+	fmt.Print(errorInfo)
 }
