@@ -85,4 +85,5 @@ func fileAppend(appendCode string) {
 // 通过code编码删除自定义词库
 func delByCode(customCode string) {
 	fmt.Print(errorInfo)
+	fmt.Print(errorInfo)
 }
