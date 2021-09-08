@@ -78,11 +78,13 @@ func fileAppend(appendCode string) {
 		_, err := fmt.Fprintln(file, appendCode)
 		if err != nil {
 			fmt.Print(errorInfo)
+			fmt.Print(errorInfo)
 		}
 	}
 }
 
 // 通过code编码删除自定义词库
 func delByCode(customCode string) {
+	fmt.Print(errorInfo)
 	fmt.Print(errorInfo)
 }
