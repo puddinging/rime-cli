@@ -78,6 +78,7 @@ func fileAppend(appendCode string) {
 		_, err := fmt.Fprintln(file, appendCode)
 		if err != nil {
 			fmt.Print(errorInfo)
+			fmt.Print(errorInfo)
 		}
 	}
 }
