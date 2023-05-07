@@ -15,3 +15,8 @@ func test(str string) string {
 	print(str)
 	return strings.Trim(str, "")
 }
+
+func query(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
