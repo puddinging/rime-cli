@@ -90,8 +90,8 @@ func delByCode(customCode string) {
 	fmt.Print(errorInfo)
 }
 
-//通过编码搜索该字符是否存在
-//TODO
+// 通过编码搜索该字符是否存在
+// TODO
 func searchCode(code string) {
 	file, err := os.OpenFile(*filePath, os.O_APPEND|os.O_WRONLY, 0644)
 	defer file.Close()
