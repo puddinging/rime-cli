@@ -55,6 +55,7 @@ func generateDefaultDirPath() (string, error) {
 	current, _ := user.Current()
 	homeDir := current.HomeDir
 	goos := runtime.GOOS
+	//判断不同操作系统
 	if "windows" == goos {
 		return homeDir + winDefaultDirPath + customPhraseFileName, nil
 	} else if "darwin" == goos {
@@ -87,4 +88,14 @@ func fileAppend(appendCode string) {
 func delByCode(customCode string) {
 	fmt.Print(errorInfo)
 	fmt.Print(errorInfo)
+}
+
+//通过编码搜索该字符是否存在
+//TODO
+func searchCode(code string) {
+	file, err := os.OpenFile(*filePath, os.O_APPEND|os.O_WRONLY, 0644)
+	defer file.Close()
+	if err == nil {
+		fmt.Print("编码不存在")
+	}
 }
