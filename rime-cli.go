@@ -66,16 +66,23 @@ func generateDefaultDirPath() (string, error) {
 	}
 }
 
-// 代追加字符串拼接
+// 追加字符串拼接
 func appendCodeSplicing(customWord string, wordCode string, priority int) string {
 	priorityStr := strconv.Itoa(priority)
-	return customWord + "	" + wordCode + "	" + priorityStr + "\n"
+	//使用fmt拼接，理论上来说性能更好一些
+	sprintf := fmt.Sprintf("%s\t%s\t%s\n", customWord, wordCode, priorityStr)
+	return sprintf
 }
 
 // 文件追加
 func fileAppend(appendCode string) {
 	file, err := os.OpenFile(*filePath, os.O_APPEND|os.O_WRONLY, 0644)
-	defer file.Close()
+	defer func(file *os.File) {
+		err := file.Close()
+		if err != nil {
+			fmt.Print(errorInfo)
+		}
+	}(file)
 	if err == nil {
 		_, err := fmt.Fprintln(file, appendCode)
 		if err != nil {
