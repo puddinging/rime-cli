@@ -30,3 +30,11 @@ func deleteCode(code string) {
 		fmt.Print("更新成功")
 	}
 }
+
+func complateCode(code string) {
+	file, err := os.OpenFile(*filePath, os.O_APPEND|os.O_WRONLY, 0644)
+	defer file.Close()
+	if err == nil {
+		fmt.Print("更新成功")
+	}
+}
