@@ -99,6 +99,7 @@ func delByCode(customCode string) {
 }
 
 // 通过编码搜索该字符是否存在
+
 // TODO
 func searchCode(code string) {
 	file, err := os.OpenFile(*filePath, os.O_APPEND|os.O_WRONLY, 0644)
