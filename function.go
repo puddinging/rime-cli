@@ -48,4 +48,11 @@ func testCode(code string) {
 	}
 }
 
-// 写一个冒泡排序
+func test5Code(code string) {
+	file, err := os.OpenFile(*filePath, os.O_APPEND|os.O_WRONLY, 0644)
+	defer file.Close()
+	if err == nil {
+		fmt.Print("更新成功")
+		// 你好
+	}
+}
