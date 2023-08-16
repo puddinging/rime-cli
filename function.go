@@ -44,5 +44,8 @@ func testCode(code string) {
 	defer file.Close()
 	if err == nil {
 		fmt.Print("更新成功")
+		// 你好
 	}
 }
+
+// 写一个冒泡排序
