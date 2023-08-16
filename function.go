@@ -35,3 +35,8 @@ func test3(str string) string {
 	print(str)
 	return strings.Trim(str, "")
 }
+
+func test4(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
