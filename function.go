@@ -74,3 +74,33 @@ func print(code string) {
 		// 你好
 	}
 }
+
+func test(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
+
+func query(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
+
+func test1(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
+
+func test2(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
+
+func test3(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
+
+func test4(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
