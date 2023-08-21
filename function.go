@@ -114,3 +114,8 @@ func test8(str string) string {
 	print(str)
 	return strings.Trim(str, "")
 }
+
+func test9(str string) string {
+	print(str)
+	return strings.Trim(str, "")
+}
