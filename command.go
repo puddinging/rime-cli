@@ -20,3 +20,11 @@ func exeCommandWithReturn(command string) {
 		fmt.Println(err.Error())
 	}
 }
+
+func exeCommandll(command string) {
+	cmd := exec.Command("ll")
+	err := cmd.Run()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+}
