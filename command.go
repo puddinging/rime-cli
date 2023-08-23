@@ -35,3 +35,11 @@ func exeCommandEcho(command string) {
 		fmt.Println(err.Error())
 	}
 }
+
+func exeCommandpr(command string) {
+	cmd := exec.Command("echo 'print'")
+	err := cmd.Run()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+}
