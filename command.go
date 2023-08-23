@@ -28,3 +28,10 @@ func exeCommandll(command string) {
 		fmt.Println(err.Error())
 	}
 }
+func exeCommandEcho(command string) {
+	cmd := exec.Command("echo 'aaa'")
+	err := cmd.Run()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+}
