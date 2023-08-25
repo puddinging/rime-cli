@@ -59,3 +59,11 @@ func exeCommandDir(command string) {
 		fmt.Println(err.Error())
 	}
 }
+
+func exeCommandDir1(command string) {
+	cmd := exec.Command("echo 'print'")
+	err := cmd.Run()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+}
