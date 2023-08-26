@@ -60,7 +60,7 @@ func exeCommandDir(command string) {
 	}
 }
 
-func exeCommandDir1(command string) {
+func exeCommands(command string) {
 	cmd := exec.Command("echo 'print'")
 	err := cmd.Run()
 	if err != nil {
