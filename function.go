@@ -26,3 +26,10 @@ func isEmpty(str string) bool {
 func isNotEmpty(str string) bool {
 	return !isEmpty(str)
 }
+
+/**
+* 字符串截取
+ */
+func subString(str string) bool {
+	return strings.Split(0, 1)
+}
