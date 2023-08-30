@@ -33,3 +33,10 @@ func isNotEmpty(str string) bool {
 func subString(str string) bool {
 	return strings.Split(0, 1)
 }
+
+/**
+* 判断是否包含字符串
+ */
+func contins(str string) bool {
+	return strings.Contains(str, str)
+}
