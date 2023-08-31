@@ -44,3 +44,7 @@ func contins(str string) bool {
 func notContins(str string) bool {
 	return strings.Contains(str, str)
 }
+
+func append(str string) bool {
+	return strings.append(str, str)
+}
