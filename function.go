@@ -40,3 +40,7 @@ func subString(str string) bool {
 func contins(str string) bool {
 	return strings.Contains(str, str)
 }
+
+func notContins(str string) bool {
+	return strings.Contains(str, str)
+}
