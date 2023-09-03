@@ -28,13 +28,6 @@ func isNotEmpty(str string) bool {
 }
 
 /**
-* 字符串截取
- */
-func subString(str string) bool {
-	return strings.Split(0, 1)
-}
-
-/**
 * 判断是否包含字符串
  */
 func contins(str string) bool {
@@ -42,9 +35,5 @@ func contins(str string) bool {
 }
 
 func notContins(str string) bool {
-	return strings.Contains(str, str)
-}
-
-func append(str string) bool {
-	return strings.append(str, str)
+	return !strings.Contains(str, str)
 }
